@@ -4,6 +4,7 @@ require('dotenv').config();
 const pool = require('./config/db');
 
 const authRoutes = require('./routes/auth.routes');
+const zonesRoutes = require('./routes/zones.routes'); // Module Zones (Khalil)
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/zones', zonesRoutes); // Module Zones (Khalil)
 
 // Route de test
 app.get('/', (req, res) => {
