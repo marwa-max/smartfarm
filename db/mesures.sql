@@ -1,0 +1,7 @@
+CREATE TABLE mesures (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  zone_id INT NOT NULL,
+  humidite FLOAT,
+  temperature FLOAT,
+  date_mesure DATETIME DEFAULT CURRENT_TIMESTAMP
+);
